@@ -1,0 +1,10 @@
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile /var/www/.htpasswd
+Require valid-user
+
+Options -Indexes
+
+#<FilesMatch "\.(jpg|jpeg|png|gif|html)$">
+#Header set Cache-Control "max-age=0"
+#</FilesMatch>
