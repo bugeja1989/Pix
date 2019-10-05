@@ -6,8 +6,8 @@
 
 ul.ins-imgs {
     list-style-type: none;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 li.ins-imgs-li {
@@ -18,8 +18,8 @@ li.ins-imgs-li {
 }
 
 div.ins-imgs-img img {
-    width: 330px;
-    height: 189px;
+    width: 25%;
+    height:auto;
     outline: none;
     -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
