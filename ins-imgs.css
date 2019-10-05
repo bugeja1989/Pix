@@ -20,10 +20,12 @@ li.ins-imgs-li {
 }
 
 div.ins-imgs-img img {
+    width: 100%;
+    height: 100%;
     outline: none;
     -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5); 
 }
 
 div.ins-imgs-img.zoom img {
