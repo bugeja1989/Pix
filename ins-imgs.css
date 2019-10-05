@@ -8,6 +8,7 @@ ul.ins-imgs {
     list-style-type: none;
     margin-left: 10%;
     margin-right: 10%;
+    padding:5px;
 }
 
 li.ins-imgs-li {
