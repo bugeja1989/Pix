@@ -42,10 +42,8 @@ if ($sortByImageName) {
 }
 
 # Generate the HTML output
-writeHtml('<ul class="ins-imgs">');
+writeHtml('<ul class="ins-imgs clearfix">');
 foreach ($sortedImages as $image) {
-
-    die(var_dump($image));
 
     # Get the name of the image, stripped from image folder path and file type extension
     $name = 'Image name: ' . substr($image, strlen($imageFolder), strpos($image, '.') - strlen($imageFolder));
@@ -59,8 +57,7 @@ foreach ($sortedImages as $image) {
     # Begin adding
     writeHtml('<li class="ins-imgs-li">');
     writeHtml('<div class="ins-imgs-img" ><a name="' . $image . '" href="http://'. $us_pw  .':'. $us_pw  .'@' . $ip_add . '/web/mobile.html" target="_blank">');
-    // writeHtml('<img src="http://' . $ip_add . '/tmpfs/auto.jpg?usr='. $us_pw  .'&pwd='. $us_pw  .'" alt="' . $name . '" title="' . $name . '">');
-    writeHtml('<img src="' . getRefreshedImageURL($ip_add, $us_pw, $url_unform) . '" alt="' . $name . '" title="' . $name . '">');
+    writeHtml('<img src="http://' . $ip_add . '/tmpfs/auto.jpg?usr='. $us_pw  .'&pwd='. $us_pw  .'" alt="' . $name . '" title="' . $name . '">');
     writeHtml('</a></div>');
     writeHtml('<div class="ins-imgs-label">' . $url_unform . ' ' . $lastModified . '</div>');
     writeHtml('</li>');
@@ -72,16 +69,4 @@ writeHtml('<link rel="stylesheet" type="text/css" href="ins-imgs.css">');
 # Convert HTML to JS
 function writeHtml($html) {
     echo "document.write('" . $html . "');\n";
-}
-
-function getRefreshedImageURL($ip, $pw) {
-
-    ch = curl_init('http://example.com/image.php');
-    $fp = fopen($imageFolder . '', 'wb');
-    curl_setopt($ch, CURLOPT_FILE, $fp);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_exec($ch);
-    curl_close($ch);
-    fclose($fp);
-
 }
